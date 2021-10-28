@@ -3,9 +3,31 @@
     margin: 0;
 }
 
-.header
+#header
 {
-    position: static;
+    background: #222327;
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+}
+
+#footer1
+{
+    position: relative;
+    bottom: 0;
+    background: #222327;
+    color: white;
+    font-size: small;
+    text-align: center;
+}
+
+.footer1 img
+{
+    width: 15%;
+    height: 15%;
 }
 
 .wrapper
