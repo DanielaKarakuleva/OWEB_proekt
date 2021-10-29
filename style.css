@@ -22,6 +22,8 @@
     color: white;
     font-size: small;
     text-align: center;
+    font-family: sans-serif;
+    font-style: normal;
 }
 
 .footer1 img
@@ -84,7 +86,7 @@ ul li ul {
      position: absolute;
      transition: all 0.5s ease;
      margin-top: 1rem;
-     left: 85%;
+     left: 90%;
      display: ruby-base-container;
    }
    
@@ -140,7 +142,7 @@ ul li ul li {
 
 .about_txt h1
 {
-    color: seagreen;
+    color: rgb(3, 15, 8);
     font-size: 80px;
     text-transform: capitalize;
     margin-bottom: 20px;
@@ -148,7 +150,7 @@ ul li ul li {
 
 .about_txt h3
 {
-    color:seagreen;
+    color:rgb(3, 15, 8);
     font-size: 55px;
     text-transform: capitalize;
     margin-bottom: 25px;
@@ -158,7 +160,7 @@ ul li ul li {
 
 .about_txt h4
 {
-    color: seagreen;
+    color: rgb(3, 15, 8);
     font-size: 20px;
     text-transform: none;
     margin-bottom: 25px;
@@ -210,7 +212,7 @@ ul li ul li {
 }
 .contact h1
 {
-    color: seagreen;
+    color: rgb(3, 15, 8);
     font-size: 80px;
     text-transform: capitalize;
     margin-bottom: 20px;
@@ -219,7 +221,7 @@ ul li ul li {
 
 .contact h3
 {
-    color:seagreen;
+    color: rgb(3, 15, 8);
     font-size: 55px;
     margin-bottom: 25px;
     letter-spacing: 2px;
@@ -228,7 +230,7 @@ ul li ul li {
 }
 .contact h4
 {
-    color: seagreen;
+    color: rgb(3, 15, 8);
     font-size: 30px;
     text-transform: none;
     margin-bottom: 25px;
@@ -375,7 +377,7 @@ ul li ul li {
 
 .feedback h1
 {
-    color: seagreen;
+    color: rgb(3, 15, 8);
     font-size: 80px;
     text-transform: capitalize;
     margin-bottom: 20px;
@@ -384,7 +386,7 @@ ul li ul li {
 
 .feedback h3
 {
-    color:seagreen;
+    color:rgb(3, 15, 8);
     font-size: 55px;
     margin-bottom: 25px;
     letter-spacing: 2px;
@@ -476,7 +478,32 @@ ul li ul li {
     border-radius: 2px;
 }
 
+.music
+{
+    width: 100%;
+    padding: 78px 0px;
+    background-color: rgba(104, 143, 194, 255);
 
+}
+
+.music h1
+{
+    color: rgb(3, 15, 8);
+    font-size: 80px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.music h3
+{
+    color:rgb(3, 15, 8);
+    font-size: 55px;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+    font-style: initial;
+    text-align: center;
+}
 
 
 
