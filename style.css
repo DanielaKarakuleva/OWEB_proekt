@@ -183,6 +183,28 @@ ul li ul li {
     padding: 78px 0px;
     background-color: rgba(104, 143, 194, 255);
 
+
+}
+
+.gallery h1
+{
+    color: rgb(3, 15, 8);
+    font-size: 80px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.gallery img
+{
+    width: 210px;
+    padding: 10px;
+    transition: 1s;
+}
+
+.gallery img:hover
+{
+    transform: scale(1.055);
 }
 
 .blog
@@ -504,6 +526,44 @@ ul li ul li {
     font-style: initial;
     text-align: center;
 }
+
+.films
+{
+    width: 100%;
+    padding: 80px 0 60px 0;
+    background-color: rgba(104, 143, 194, 255);
+
+}
+
+.films h1
+{
+    color: rgb(3, 15, 8);
+    font-size: 80px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.films img
+{
+    width: 210px;
+    padding: 10px;
+    align-self: center;
+    text-align: center;
+    right: 50%;
+}
+
+.films figure
+{
+    align-self: center;
+    padding-left: 45%;
+}
+
+.films figcaption
+{
+    padding-left: 45%;
+}
+
 
 
 
