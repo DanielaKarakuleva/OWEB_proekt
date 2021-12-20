@@ -9,6 +9,8 @@
         <link rel = "stylesheet" href="style.css">
         <link rel="stylesheet" href="lightbox.min.css">
         <script src="lightbox-plus-jquery.min.js"></script>
+        <script src="blog.js"></script>
+        <script src="tnx.js"></script>
         <script src="likes.js"></script>
         <script src="welcome.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -42,7 +44,8 @@
 
     <!--HOME-->
     <section id="home">
-        <div class="wrapper">
+        <div class="home">
+            <div class="greeting" id="greet"></div>
         </div>
     </section>
 
@@ -81,16 +84,60 @@
         <div class="gallery">
             <h1>See the world through my lens <i class="fas fa-camera-retro"></i> </h1>
             <figure><a href="imgs/Portugal/Braga.jpg" data-lightbox="mygallery" data-title="Braga, Portugal"><img src="imgs/Portugal/small/Braga_small.jpg"></a></figure>
-                <figcaption><i onclick="Toggle(btn1)" id="btn1" class="far fa-heart"></i></figcaption>
+                <figcaption><i onclick="Toggle(btn1)" id="btn1" class="far fa-heart"></i>
+                    <div class="comment-box">
+                        <input type="text" placeholder="Comment" class="comment" id="comment" style="font-size: 15px;">
+                        <button class="add-comment" id="add-comment1" style="border:none;"><i class="fa fa-send"></i></button>
+                    </div>
+                </figcaption>
             <figure><a href="imgs/Portugal/Porto.jpg" data-lightbox="mygallery" data-title="Porto, Portugal"><img src="imgs/Portugal/small/Porto_small.jpg"></a></figure>
                 <figcaption><i onclick="Toggle(btn2)" id="btn2" class="far fa-heart"></i></figcaption>
             <figure><a href="imgs/Portugal/Aveiro.jpg" data-lightbox="mygallery" data-title="Aveiro, Portugal"><img src="imgs/Portugal/small/Aveiro_small.jpg"></a></figure> 
                 <figcaption><i onclick="Toggle(btn3)" id="btn3" class="far fa-heart"></i></figcaption>
             <figure><a href="imgs/Romania/Bucharest.jpg" data-lightbox="mygallery" data-title="Bucharest, Romania"><img src="imgs/Romania/small/Bucharest_small.jpg"></a></figure> 
                 <figcaption><i onclick="Toggle(btn4)" id="btn4" class="far fa-heart"></i></figcaption>
-            <figure><a href="imgs/Romania/Castle.jpeg" data-lightbox="mygallery" data-title="Peleș Castle, Romania"><img src="imgs/Romania/small/Castle_small.jpeg"></a></a</figure>
-                <figcaption><i onclick="Toggle(btn5)" id="btn5" class="far fa-heart"></i></figcaption>    
+            <figure><a href="imgs/Romania/Castle.jpeg" data-lightbox="mygallery" data-title="Peleș Castle, Romania"><img src="imgs/Romania/small/Castle_small.jpeg"></a></figure>
+                <figcaption><i onclick="Toggle(btn5)" id="btn5" class="far fa-heart"></i></figcaption> 
+            
+            <h3>Upload</h3>
+            <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadPic(event)" style="display: none;"></p>
+          <div style = "text-align: center; font-size: 30pt; color:seagreen;"><label for="file" style="cursor: pointer;"><i class="fa fa-upload"></i></label></div>
+            <p id="picUpload" style="text-align: center;"><figure><img id="picture" width="210px" height="auto"/></figure>
+                <figcaption><i onclick="Toggle(btn)" id="btn" class="far fa-heart"></i></figcaption> 
+            </p>
+            <script>
+                var loadPic = function(event)
+                {
+                    var slika = document.getElementById("picture")
+                    slika.src = URL.createObjectURL(event.target.files[0])
+                }
+            </script>
         </div>
+    </section>
+
+    <!--BLOG-->
+    <section id="blog">
+            <div class="card">
+                <h1>Express your thoughts and creativity without hesitation</h1>
+                    <form>
+                        <p>
+                            <input class="text-box" type="text" id="myTitle" placeholder="Title">
+                            <input class="text-box" type="text" id="NameSurname" placeholder="Name and Surname">
+                        </p>
+                        <textarea id="myText" placeholder="Your post"></textarea>
+                    </form>
+                    <p style="text-align: center;"><button class="post-btn" onclick="post()">Post</button></p>
+        
+                    </form>
+            </div>
+
+        
+            <div id="posted">
+                <script>
+                    document.getElementById("posted").innerHTML = getSavedValuePost("posted");
+                </script>
+            </div>
+
     </section>
 
     <!--FEEDBACK-->
@@ -111,7 +158,7 @@
                 <form class="contact" action="" method="post">
                     <input type="text" name="name" class="text-box" placeholder="Your Name">
                     <textarea name="message" rows="5" placeholder="Your comment"></textarea>
-                    <input type="submit" name="submit" class="send-btn" value="Send">
+                    <button onclick="tnx_feedback();">Submit</button>
                 </form>
             </div>
         </p>
@@ -146,6 +193,10 @@
                     <figcaption><em>Call me by your name</em><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></figcaption>
             </div>
         </section>
+
+        <section id="food">
+
+        </section>
     </section>
 
     <!--CONTACT-->
@@ -172,7 +223,7 @@
                     <input type="text" name="name" class="text-box" placeholder="Your Name" required>
                     <input type="email" name="email" class="text-box" placeholder="Your E-mail" required>
                     <textarea name="message" rows="5" placeholder="Your message" required></textarea>
-                    <input type="submit" name="submit" class="send-btn" value="Send">
+                    <button onclick="tnx_contact()";>Send</button>
                 </form>
             </div>
         </div>

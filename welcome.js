@@ -1,21 +1,25 @@
+function welcome()
+{
 var name;
 var now = new Date();
 var hour = now.getHours();
+var output = document.getElementById("greet")
 
 name = window.prompt("Please enter your name");
 
 if(hour<12)
-document.writeln("<h1>Good morning ");
+output.innerHTML = "<div>Good morning " + name + "!</div>"
 
 if(hour>=12)
 {
     hour =  hour - 12;
 
     if(hour<6)
-    document.writeln("<h1>Good afternoon ");
+    output.innerHTML = "<div>Good afternoon " + name + "!</div>"
 
     if (hour>=6)
-    document.writeln("<h1>Good evening ");
+    output.innerHTML = "<div>Good evening " + name + "!</div>"
 }
 
-document.writeln(name + "<h1>");
+}
+window.addEventListener("load", welcome,false)
