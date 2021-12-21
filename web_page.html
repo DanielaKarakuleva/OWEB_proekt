@@ -10,6 +10,8 @@
         <link rel="stylesheet" href="lightbox.min.css">
         <script src="lightbox-plus-jquery.min.js"></script>
         <script src="blog.js"></script>
+        <script src="comment.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="tnx.js"></script>
         <script src="likes.js"></script>
         <script src="welcome.js"></script>
@@ -85,19 +87,57 @@
             <h1>See the world through my lens <i class="fas fa-camera-retro"></i> </h1>
             <figure><a href="imgs/Portugal/Braga.jpg" data-lightbox="mygallery" data-title="Braga, Portugal"><img src="imgs/Portugal/small/Braga_small.jpg"></a></figure>
                 <figcaption><i onclick="Toggle(btn1)" id="btn1" class="far fa-heart"></i>
-                    <div class="comment-box">
-                        <input type="text" placeholder="Comment" class="comment" id="comment" style="font-size: 15px;">
-                        <button class="add-comment" id="add-comment1" style="border:none;"><i class="fa fa-send"></i></button>
-                    </div>
+                     <section id="komentari">
+                         <div class="container">
+                             <input type="text" placeholder="Comment" id="comment" class="comment">
+                             <button class="add-comment" id="add-comment1" onclick="insert(0)"><i class="far fa-share-square"></i></button>
+                         </div>
+                         <section class="comments" id="comments-container"></section>
+                     </section>
                 </figcaption>
+
             <figure><a href="imgs/Portugal/Porto.jpg" data-lightbox="mygallery" data-title="Porto, Portugal"><img src="imgs/Portugal/small/Porto_small.jpg"></a></figure>
-                <figcaption><i onclick="Toggle(btn2)" id="btn2" class="far fa-heart"></i></figcaption>
+                <figcaption><i onclick="Toggle(btn2)" id="btn2" class="far fa-heart"></i>
+                    <section id="komentari">
+                        <div class="container">
+                            <input type="text" placeholder="Comment" id="comment" class="comment">
+                            <button class="add-comment" id="add-comment1" onclick="insert(1)"><i class="far fa-share-square"></i></button>
+                        </div>
+                        <section class="comments" id="comments-container"></section>
+                    </section>
+                </figcaption>
+
             <figure><a href="imgs/Portugal/Aveiro.jpg" data-lightbox="mygallery" data-title="Aveiro, Portugal"><img src="imgs/Portugal/small/Aveiro_small.jpg"></a></figure> 
-                <figcaption><i onclick="Toggle(btn3)" id="btn3" class="far fa-heart"></i></figcaption>
+                <figcaption><i onclick="Toggle(btn3)" id="btn3" class="far fa-heart"></i>
+                    <section id="komentari">
+                        <div class="container">
+                            <input type="text" placeholder="Comment" id="comment" class="comment">
+                            <button class="add-comment" id="add-comment1" onclick="insert(2)"><i class="far fa-share-square"></i></button>
+                        </div>
+                        <section class="comments" id="comments-container"></section>
+                    </section>
+                </figcaption>
+                
             <figure><a href="imgs/Romania/Bucharest.jpg" data-lightbox="mygallery" data-title="Bucharest, Romania"><img src="imgs/Romania/small/Bucharest_small.jpg"></a></figure> 
-                <figcaption><i onclick="Toggle(btn4)" id="btn4" class="far fa-heart"></i></figcaption>
+                <figcaption><i onclick="Toggle(btn4)" id="btn4" class="far fa-heart"></i>
+                    <section id="komentari">
+                        <div class="container">
+                            <input type="text" placeholder="Comment" id="comment" class="comment">
+                            <button class="add-comment" id="add-comment1" onclick="insert(3)"><i class="far fa-share-square"></i></button>
+                        </div>
+                        <section class="comments" id="comments-container"></section>
+                    </section>
+                </figcaption>
             <figure><a href="imgs/Romania/Castle.jpeg" data-lightbox="mygallery" data-title="Peleș Castle, Romania"><img src="imgs/Romania/small/Castle_small.jpeg"></a></figure>
-                <figcaption><i onclick="Toggle(btn5)" id="btn5" class="far fa-heart"></i></figcaption> 
+                <figcaption><i onclick="Toggle(btn5)" id="btn5" class="far fa-heart"></i>
+                    <section id="komentari">
+                        <div class="container">
+                            <input type="text" placeholder="Comment" id="comment" class="comment">
+                            <button class="add-comment" id="add-comment1" onclick="insert(4)"><i class="far fa-share-square"></i></button>
+                        </div>
+                        <section class="comments" id="comments-container"></section>
+                    </section>
+                </figcaption> 
             
             <h3>Upload</h3>
             <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadPic(event)" style="display: none;"></p>
@@ -195,6 +235,52 @@
         </section>
 
         <section id="food">
+            <div class="food">
+                <h1>Favourite dishes and much more</h1>
+                <h3><cite>People who love to eat are the best people - Julia Child</cite></h3>
+                <figure><img src="imgs/primavera.jpg"></figure>
+                <figcaption>
+                    <a href="https://www.cookingclassy.com/pasta-primavera/">Pasta Primavera</a>
+                    <p><i class="fas fa-map-pin">Public Room, Kantina</i></p>
+                </figcaption>
+
+                <figure><img src="imgs/lavacake.jpg"></figure>
+                <figcaption>
+                    <a href="https://www.foodandwine.com/recipes/molten-chocolate-cakes">Lava Cake</a>
+                    <p><i class="fas fa-map-pin">Get Cafe, Soul Kitchen</i></p>
+                </figcaption>
+
+                <figure><img src="imgs/avocadobacon.jpg"></figure>
+                <figcaption>
+                    <a href="https://realfood.tesco.com/recipes/avocado-and-bacon-sandwich.html">Avocado Sandwich</a>
+                    <p><i class="fas fa-map-pin">Brunchbox Eatery, Enriko</i></p>
+                </figcaption>
+
+                <figure><img src="imgs/cheeseburger.jpg"></figure>
+                <figcaption>
+                    <a href="https://www.foodrepublic.com/recipes/all-american-cheeseburger-recipe/">Cheeseburger</a>
+                    <p><i class="fas fa-map-pin">Kiosk, Baking Bread, Burger Slut, Rustikana</i></p>
+                </figcaption>
+
+                <figure><img src="imgs/mexican.png"></figure>
+                <figcaption>
+                    <a href="https://www.delicious.com.au/recipes/collections/gallery/40-mexican-recipes-for-your-weekend-fiesta/6k3n6ehf">Tacos</a>
+                    <p><i class="fas fa-map-pin">BKW, Taco's Jam, La Puerta</i></p>
+                </figcaption>
+
+                <figure><img src="imgs/waffles.jpg"></figure>
+                <figcaption>
+                    <a href="https://www.allrecipes.com/recipe/20513/classic-waffles/">Waffles</a>
+                    <p><i class="fas fa-map-pin">Plaza de Toros, Piazza Liberta, Bubble Waffles</i></p>
+                </figcaption>
+
+                <figure><img src="imgs/cocktails.jpg"></figure>
+                <figcaption>
+                    <a href="https://www.bbcgoodfood.com/recipes/collection/cocktail-recipes">Cocktails</a>
+                    <p><i class="fas fa-map-pin">Drinkers Paradise, Radiobar, Badu, DoBAR bar, Kino Karposh</i></p>
+                </figcaption>
+
+            </div>
 
         </section>
     </section>

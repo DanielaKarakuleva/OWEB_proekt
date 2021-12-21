@@ -241,6 +241,44 @@ ul li ul li {
     padding-left: 45%;
 }
 
+.container
+{
+    width: fit-content;
+    border: 2px solid #333;
+    align-self: center;
+    resize: both;
+}
+
+.container textarea
+{
+    height: 20px;
+    width: 165px;
+    border: none;
+    border-bottom: 2px solid #aaa;
+    background-color: transparent;
+    margin-bottom: 10px;
+    resize: both;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: .5s;
+}
+
+.container button
+{
+    padding: 2.5px 2.5px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.comments
+{
+    width: auto;
+    height: auto;
+    font-size: medium;
+    text-decoration: seagreen;
+}
+
 .card
 {
     width: 100%;
@@ -428,10 +466,6 @@ ul li ul li {
     font-size: 18px;
 }
 
-.contact-form button
-{
-
-}
 
 .social-media 
 {
@@ -705,5 +739,54 @@ ul li ul li {
 }
 
 
+.food
+{
+    width: 100%;
+    padding: 78px 0px;
+    background-color: rgba(104, 143, 194, 255);
+    justify-content: center;
+
+
+}
+
+.food h1
+{
+    color: rgb(3, 15, 8);
+    font-size: 70px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.food h3
+{
+    color: rgb(3, 15, 8);
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.food figure
+{
+    align-self: center;
+    padding-left: 45%;
+    margin-top: 5%;
+}
+
+.food img
+{
+    width: 25%;
+    height: 15%;
+}
+
+.food figcaption
+{
+    padding-left: 48%;
+}
+
+.food a
+{
+    color: rgb(3, 15, 8);
+}
 
 
